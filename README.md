@@ -112,6 +112,15 @@ networks:
       com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
 ```
 
+we could configure a network named `default` in our stack, and that would be the network that all the containers in the stack are automatically connected to.
+
+### summary
+
+it seems we could either:
+
+* define a network named `default` and set it to bridge, done (easiest)
+* define a network named something other than `default`, set it to bridge, then set up each container in the stack to use it
+
 ## in_pod: false
 
 old hacky workaround for networking issues:
