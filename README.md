@@ -38,4 +38,7 @@ dedicated `zfsbackup` user with cron job in `/var/spool/cron/crontabs/zfsbackup`
 ```
 # backup local dockerz/docker dataset to dockerz2 pool on host 192.168.1.121
 43 * * * * syncoid --no-resume dockerz/docker 192.168.1.121:dockerz2
+
+# useful setting?
+# --keep-sync-snap - don't delete (local? remote? both?)
 ```
