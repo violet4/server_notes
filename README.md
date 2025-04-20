@@ -91,8 +91,28 @@ services:
 networks:
   my-compose-stack-network:
     name: my-compose-stack-network
+    # according to the docs, external:false means this network is managed by this compose file/stack, not created/managed externally
+    # https://github.com/compose-spec/compose-spec/blob/main/06-networks.md#external
     external: false
 ```
+
+## network bridge
+
+https://docs.docker.com/engine/network/drivers/bridge/#differences-between-user-defined-bridges-and-the-default-bridge
+
+> Containers on the default bridge network can only access each other by IP addresses, unless you use the --link option, which is considered legacy. On a user-defined bridge network, containers can resolve each other by name or alias.
+
+```yaml
+networks:
+  my-compose-stack-network:
+    # Specify driver options
+    driver: bridge
+    driver_opts:
+      # https://docs.docker.com/engine/network/drivers/bridge/#options
+      com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
+```
+
+## in_pod: false
 
 old hacky workaround for networking issues:
 
