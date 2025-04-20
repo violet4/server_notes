@@ -130,3 +130,7 @@ old hacky workaround for networking issues?
 x-podman:
     in_pod: false
 ```
+
+### migration
+
+currently moving from `/mnt/docker_drive/docker/portainer/compose` to `/mnt/docker_drive/docker/*`.
