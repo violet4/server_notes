@@ -121,9 +121,9 @@ it seems we could either:
 * define a network named `default` and set it to bridge, done (easiest)
 * define a network named something other than `default`, set it to bridge, then set up each container in the stack to use it
 
-## in_pod: false
+### in_pod: false
 
-old hacky workaround for networking issues:
+old hacky workaround for networking issues?
 
 ```yaml
 # https://github.com/containers/podman-compose/pull/964/files
