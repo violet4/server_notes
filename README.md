@@ -1,10 +1,8 @@
 # server_notes
 
-2025-04-20
-
 this is where notes go to get my filesystems bootstrapped before i can run my programs/servers/services/docker/etc.
 
-most of my applications/data/etc are run from docker containers on a hard drive running zfs with automatic incremental snapshots that can be pushed over the network, but we updated our server setup and the motherboard the original server was on was misbehaving. so now i have disembodied HDDs/SSDs. the SSD is running the OS on LVM, the docker data is on zfs HDD. then we need notes outside of those two systems that we can use to get ourselves bootstrapped into those.
+most of my applications/data/etc are run from docker containers on a hard drive running zfs with automatic incremental snapshots that can be pushed over the network, but we recently (2025-04-20) updated our server setup and the motherboard the original server was on was misbehaving. so now i have disembodied HDDs/SSDs. the SSD is running the OS on LVM, the docker data is on zfs HDD. then we need notes outside of those two systems that we can use to get ourselves bootstrapped into those.
 
 # LVM
 
